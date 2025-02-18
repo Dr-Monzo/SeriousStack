@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Substack Notes",
+  "version": "1.0",
+  "description": "Hides or disables the Notes feed on Substack.com",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://substack.com/*", "https://*.substack.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://substack.com/*", "https://*.substack.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
